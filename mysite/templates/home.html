@@ -1,0 +1,16 @@
+<!-- templates/home.html -->
+{% extends "polls/header.html" %}
+{% block content %}
+<center>
+<h1 style="color:red">Ultimate Registration Form</h1>
+{% if user.is_authenticated %}
+<p>Hi {{ user.username }}
+<p><a href="{% url 'logout' %}">Log out</a></p>
+{% else %}
+<br>
+<h2><a href="{% url 'signup' %}">Sign Up</a></h2>
+<br>
+<h2><a href="{% url 'login' %}">Log In </a></h2>
+</center>
+{% endif %}
+{% endblock %}
