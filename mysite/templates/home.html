@@ -2,7 +2,6 @@
 {% extends "polls/header.html" %}
 {% block content %}
 <center>
-<h1 style="color:red">Ultimate Registration Form</h1>
 {% if user.is_authenticated %}
 <p>Hi {{ user.username }}
 <p><a href="{% url 'logout' %}">Log out</a></p>

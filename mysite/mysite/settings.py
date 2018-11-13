@@ -25,7 +25,7 @@ SECRET_KEY = 'apm^i($k1xt*k$p2b%gs_z)01^jvv858z*hy8bbc#h=qnn6d3m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.1.254', '0.0.0.0', 'localhost', '127.0.0.1']
 
 
 # Application definition
