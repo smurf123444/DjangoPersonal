@@ -56,6 +56,48 @@
 						</div>
 						{% endif %}
 				</center>
+				<br />
+				<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+		<div class="tradingview-widget-container__widget"></div>
+		<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Quotes</span></a> by TradingView</div>
+		<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+		{
+		"symbols": [
+		  {
+			"description": "Ethereum Classic",
+			"proName": "BITFINEX:ETCUSD"
+		  },
+		  {
+			"description": "EOS",
+			"proName": "BITFINEX:EOSUSD"
+		  },
+		  {
+			"description": "Basic Attention Token",
+			"proName": "BITFINEX:BATUSD"
+		  },
+		  {
+			"description": "Bitcoin",
+			"proName": "BITFINEX:BTCUSD"
+		  },
+		  {
+			"description": "Tezos",
+			"proName": "BITFINEX:XTZUSD"
+		  },
+		  {
+			"description": "Bitcoin Cash",
+			"proName": "BITFINEX:BCHUSD"
+		  },
+		  {
+			"description": "Cardano",
+			"proName": "BINANCE:ADAUSD"
+		  }
+		],
+		"locale": "en"
+	  }
+		</script>
+	  </div>
+	  <!-- TradingView Widget END -->
 				</div>
 			
 		</div>
@@ -84,6 +126,11 @@
 						<li class="nav-item">
 							<a class="nav-link" href="/login">User/Login</a>
 						</li>
+						{% if user.is_authenticated %}
+						<li class="nav-item">
+							<a class="nav-link" href="/chat">Chat</a>
+						</li>
+						{% endif %} 	
 					</ul>
 			</div> <!--well bs-sidebar affix-->
 		  </div> <!--col-sm-2-->

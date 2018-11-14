@@ -8,4 +8,6 @@ urlpatterns = [
 	url(r'^signup', include('users.urls')),
 	url(r'^admin/', admin.site.urls),
 	url(r'^blog/', include('blog.urls')),
+	 url(r'^chat/', include('chat.urls')),
+    url(r'^admin/', admin.site.urls),
 ]

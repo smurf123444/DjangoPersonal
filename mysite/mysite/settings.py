@@ -32,6 +32,8 @@ ALLOWED_HOSTS = ['192.168.1.254', '0.0.0.0', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
 	'polls',
+    'chat',
+    'channels',
 	'users',
 	'blog',
 	'pages',
@@ -127,3 +129,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+ASGI_APPLICATION = 'mysite.routing.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
